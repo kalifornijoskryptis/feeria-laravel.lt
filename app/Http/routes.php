@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -27,5 +23,39 @@ Route::get('/', function () {
 */
 
 Route::group(['middleware' => ['web']], function () {
-    //
+    
+    Route::get('/', function () {
+        return View::make('pages.home');
+    });
+    
+    Route::get('about', function () {
+        return View::make('pages.about');
+    });
+        
+    Route::get('projects', function () {
+        return View::make('pages.projects');
+    });
+        
+    Route::get('services', function () {
+        return View::make('pages.services');
+    });
+        
+    Route::get('request', function () {
+        return View::make('pages.request');
+    });
+        
+    Route::get('testimonials', function () {
+        return View::make('pages.testimonials');
+    });
+        
+    Route::get('contacts', function () {
+        return View::make('pages.contacts');
+    });
+    
+    Route::get('/{locale}', function ($locale) {
+        App::setLocale($locale);
+        return View::make('pages.home');
+    });
+    
 });
+
