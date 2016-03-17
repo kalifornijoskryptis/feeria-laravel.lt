@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,8 +65,18 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'lt',
 
+    /**
+     * List of alternative languages (not including the one specified as 'locale')
+     */
+    'alt_langs' => array ('en', 'ru'),
+    
+    /**
+     *  Prefix of selected locale  - leave empty (set in runtime)
+     */
+    'locale_prefix' => '',
+    
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
