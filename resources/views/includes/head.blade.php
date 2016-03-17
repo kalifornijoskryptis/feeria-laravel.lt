@@ -1,8 +1,11 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Feeria - Laravel</title>
+        <!-- Aciu už demesio! ;D -->
 
+        <title>@yield('title', 'Feeria')</title>
+        <meta charset="utf-8">
+        
+        <meta name="description" content="@yield('keywords', 'web development')">
+        <meta name="author" content="Feeria (Kalifornijos kryptis, UAB)">
+        
         <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
         <style>
@@ -21,8 +24,8 @@
 
             .container {
                 text-align: center;
-                display: table-cell;
-                vertical-align: middle;
+                /*display: table-cell;
+                vertical-align: middle;*/
             }
 
             .content {
@@ -34,12 +37,3 @@
                 font-size: 96px;
             }
         </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Feeria - Laravel 5</div>
-            </div>
-        </div>
-    </body>
-</html>
